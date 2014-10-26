@@ -1,50 +1,4 @@
----
-title: "CodeBook for run_analysis.R script"
-output: html_document
----
-
-
-"A code book describes the variables, the data, and any transformations or work performed to clean up the data."" 
-
-Note that all the data presented here (means, standard
-deviations were originally normalised  to 
-be between -1...1 so no units!)
-
-Original data comes from: 
-
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-
-with description in:
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
-
-
-of these folders, the following files were included:
-
-
-
-features.txt - "column names" aka variable names of X_train and X_test
-X_train.txt - "train" dataset data
-y_train.txt - "train" dataset activity codes
-X_test.txt - "test" dataset data
-y_test.txt  - "test" dataset activity codes
-activity_labels.txt - activity names corresponding to y_train and y_test
-subject_train.txt - subject numbers for "train" set
-subject_test.txt - subject numbers for "test" set
-
-
-see more about the transformations performed etc. in ReadMe.md!!!
-
-"NTables" dataset is written into NTables.txt
-
-!!!!OrderedTable" is written into table.txt <- this is the step 5 file you're looking for!!!!
-
-
-These datasets were created:
-
-Ntables,'data.frame':   339867 obs. of  9 variables (note this is in .txt table format, move to excel or something for easier reading):
-
-Ntable      'data.frame':   339867 obs. of  9 variables:					
+Ntable	'data.frame':   339867 obs. of  9 variables:					
 variable	type	explanation	levels	explanation of this level (if not obvious)	corresponding value or variable in original data	cleaning or transformation
 feature	factor	the measured feature	" [1] ""acceleration of body""                                "		<BodyAcc>	"in features.txt, column names for the X_test.txt and X_train.txt"
 			" [2] ""acceleration of gravity""                             "		<GravityAcc>	"only the features with ""-mean()"" or ""-std()"" were selected"
@@ -65,13 +19,13 @@ direction	factor	direction of the measured movement	x	movement in x-direction	<X
 						
 						
 						
-mean	numeric	mean of measurements	"-1.1, no units as original data was already normalised"			"values corresponding to features.txt features with ""-mean()"""
-standardDeviation	numeric	standard deviation of measurements	"-1.1, no units as original data was already normalised"			"values corresponding to features.txt features with ""-std()"""
+mean	numeric	mean of measurements	"-1…1, no units as original data was already normalised"			"values corresponding to features.txt features with ""-mean()"""
+standardDeviation	numeric	standard deviation of measurements	"-1…1, no units as original data was already normalised"			"values corresponding to features.txt features with ""-std()"""
 						
 originset	factor	train				
 		test				
-caseid	factor	line number of combined X_train and X_test set	1.10299			
-subject	factor	subject number	1.30			
+caseid	factor	line number of combined X_train and X_test set	1…10299			
+subject	factor	subject number	1…30			
 activity	factor	activity while measurements were made	laying		6	values in y_train and y_train were attached to X_train and X_test datasets
 			sitting		4	they were replaced by labels in activity_labels.txt
 			standing		5	they were converted to lowercase
@@ -89,23 +43,3 @@ activity	char	see Ntables
 subject	char	see Ntables				
 average of means	char	average of means by activity and subject				
 average of standard deviations	char	average of standard deviations by activity and subject				
-
-
-
-
-
-
-
-						
-OrderedTable:	character matrix with 3600 rows and  6 columns 
-
-variable    type  explanation
-
-"feature with direction by activity and by subject"	char	combinations of "feature" and "direction" and "activity" and "subject" in Ntables				
-"feature with direction"	char	combinations of "feature" and "direction" in Ntables				
-"activity"	char	see previously in Ntables				
-"subject"	char	see previously in Ntables				
-"average of means"	char	average of means by activity and subject				
-"average of standard deviations"	char	average of standard deviations by activity and subject				
-
----
