@@ -5,28 +5,38 @@ output: html_document
 table.txt is the file you're probably looking for,
 the step 5 data!!!
 
+
+
+
+
+
+
+
+note that first there is the old ReadMe.txt and after that only my additions to this!!
+
+
 The script "run_analysis.R" makes a tidy(ish) dataset called "NTables" which has variables "feature","direction","mean","standardDeviation", "originset","activity","caseid", "subject", "fouriertransformed".
 This corresponds to parts 1-4 of the project exercise.
 
 After this, it makes a separate tidy dataset (part 5 of the project) called OrderedTable, with the average of each (non-fourier transformed) variable for each activity and each subject (the transformed can be included if the subsetting is excluded, but they are the same values, transformed????). This dataset is written to disk as space separated data file "table.txt".
 
-## This is a bit more complicated that maybe required in the task? But this
-## makes a tidy data set that I could use if I would work with this data, so...
-## - the datafiles are in a subfolder of the working directory ("./data"):
-## 
-##    the features.txt,X_train.txt, y_train.txt, X_test.txt, y_test.txt
-##    activity_labels.txt, subject_train.txt, subject_test.txt
+This is a bit more complicated that maybe required in the task? But this
+makes a tidy data set that I could use if I would work with this data, so...
+ - the datafiles are in a subfolder of the working directory ("./data"):
 
-## it is assumed you already have these files so there's no downloading, unzipping etc.
+    the features.txt,X_train.txt, y_train.txt, X_test.txt, y_test.txt
+    activity_labels.txt, subject_train.txt, subject_test.txt
 
-## note that running this code will take about 10 min as the final dataset
-## is quite big (339867 obs. of 9 variables)
+it is assumed you already have these files so there's no downloading, unzipping etc.
+
+note that running this code will take about 10 min as the final dataset
+ is quite big (339867 obs. of 9 variables)
 
 
-## note that this code creates a bunch of "unnecessary" temp variables, datasets etc.
-## (Creates x_train_5 out of x_train_4 instead of just overwriting x_train_4)
-## this is to make the code easier to read, but if you're short on memory 
-## maybe change this
+note that this code creates a bunch of "unnecessary" temp variables, datasets etc.
+ (Creates x_train_5 out of x_train_4 instead of just overwriting x_train_4)
+ this is to make the code easier to read, but if you're short on memory 
+ maybe change this
 
 Codebook is provided as CodeBook.md 
 
@@ -117,7 +127,21 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-end of original readme file!!!!
+
+
+
+
+
+##end of original readme file!!!!
+
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%
 %
