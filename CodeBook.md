@@ -6,6 +6,9 @@ output: html_document
 
 "A code book describes the variables, the data, and any transformations or work performed to clean up the data."" 
 
+Note that all the data presented here (means, standard
+deviations were originally normalised  to 
+be between -1...1 so no units!)
 
 Original data comes from: 
 
