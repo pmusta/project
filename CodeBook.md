@@ -85,7 +85,7 @@ fouriertransformed,factor,are mean and std- values fourier transformed or not,is
 
 
 						
-tables:	character matrix with 3600 rows and  6 columns 
+OrderedTable:	character matrix with 3600 rows and  6 columns 
 
 variable    type  explanation
 
